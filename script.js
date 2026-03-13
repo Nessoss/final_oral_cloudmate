@@ -93,13 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const activeSlide = slides[index];
         const theme = activeSlide.getAttribute('data-theme');
         
-        // Cost Counter Animation on Slide 7 (index 6)
-        if (index === 6 && !hasAnimatedCost) {
+        // Cost Counter Animation on Slide 6 (index 5)
+        if (index === 5 && !hasAnimatedCost) {
             setTimeout(() => {
                 animateValue(costCounter, 0, 47, 1500);
                 hasAnimatedCost = true;
             }, 500); // delay to let slide transition finish
-        } else if (index !== 6) {
+        } else if (index !== 5) {
             hasAnimatedCost = false; // reset so it animates again next time
         }
     }
