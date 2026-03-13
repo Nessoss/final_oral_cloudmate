@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudMate — Prototype Oral Presentation</title>
+    <meta name="description" content="CloudMate: Visualiser, Connecter et Orchestrer le Cloud AWS sans expertise DevOps. Prototype Oral Presentation — Epitech.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter" id="slideCounter">1 / 8</div>
+
+    <!-- Navigation Hints -->
+    <div class="nav-hints">
+        <span class="nav-hint" id="navPrev">← Précédent</span>
+        <span class="nav-hint" id="navNext">Suivant →</span>
+    </div>
+
+    <!-- ===== SLIDE 1: TITLE ===== -->
+    <section class="slide active" id="slide-1" data-theme="dark">
+        <div class="slide-inner title-slide">
+            <div class="floating-particles" id="particles-1"></div>
+            <div class="logo-container">
+                <img src="cloudmate.svg" alt="CloudMate Logo" class="logo-img">
+            </div>
+            <h1 class="title-main">
+                <span class="title-cloud">Cloud</span><span class="title-mate">Mate</span>
+            </h1>
+            <p class="title-tagline">Visualiser, Connecter et Orchestrer le Cloud AWS<br>
+                <strong>sans expertise DevOps.</strong>
+            </p>
+            <div class="title-badge">Prototype Oral Presentation — Epitech 2026</div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 2: LE PROBLÈME ===== -->
+    <section class="slide" id="slide-2" data-theme="problem">
+        <div class="slide-inner">
+            <div class="slide-header">
+                <span class="slide-number">01</span>
+                <h2 class="slide-title">Le Problème de l'Infrastructure Moderne</h2>
+            </div>
+            <div class="content-grid two-cols">
+                <div class="card card-red">
+                    <div class="card-icon">🔒</div>
+                    <h3>No-Code / PaaS</h3>
+                    <p class="card-subtitle">Heroku, Vercel, Railway…</p>
+                    <ul>
+                        <li>✅ Déploiement simple</li>
+                        <li>❌ <strong>Cher</strong> à l'échelle</li>
+                        <li>❌ <strong>Boîte noire</strong> — aucun contrôle</li>
+                        <li>❌ Vendor lock-in</li>
+                    </ul>
+                </div>
+                <div class="card card-red">
+                    <div class="card-icon">⚙️</div>
+                    <h3>Infrastructure as Code</h3>
+                    <p class="card-subtitle">Terraform, Pulumi, CloudFormation…</p>
+                    <ul>
+                        <li>✅ Contrôle total</li>
+                        <li>❌ Courbe d'apprentissage <strong>énorme</strong></li>
+                        <li>❌ Nécessite un <strong>expert DevOps</strong></li>
+                        <li>❌ Erreurs humaines fréquentes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide-callout callout-warning">
+                <span class="callout-icon">⚠️</span>
+                <span>Résultat : Les développeurs sont <strong>bloqués</strong> entre deux extrêmes. Aucun outil n'offre à la fois simplicité <em>et</em> contrôle.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 3: NOTRE SOLUTION ===== -->
+    <section class="slide" id="slide-3" data-theme="solution">
+        <div class="slide-inner">
+            <div class="slide-header">
+                <span class="slide-number">02</span>
+                <h2 class="slide-title">Notre Solution : CloudMate</h2>
+            </div>
+            <div class="solution-hero">
+                <div class="solution-badge">The Universal Infrastructure Composer</div>
+                <p class="solution-desc">
+                    Une <strong>couche d'abstraction visuelle intelligente</strong> par-dessus AWS.<br>
+                    Dessinez votre infrastructure. Déployez-la. Point final.
+                </p>
+            </div>
+            <div class="content-grid three-cols">
+                <div class="feature-pill">
+                    <div class="pill-icon">🎨</div>
+                    <h4>Dessiner</h4>
+                    <p>Interface visuelle drag & drop</p>
+                </div>
+                <div class="feature-pill">
+                    <div class="pill-icon">🔗</div>
+                    <h4>Connecter</h4>
+                    <p>Liaisons intelligentes auto-configurées</p>
+                </div>
+                <div class="feature-pill">
+                    <div class="pill-icon">🚀</div>
+                    <h4>Déployer</h4>
+                    <p>Un clic, zéro YAML, zéro HCL</p>
+                </div>
+            </div>
+            <div class="slide-callout callout-success">
+                <span class="callout-icon">💡</span>
+                <span>CloudMate = La puissance de Terraform avec la simplicité d'un PaaS.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 4: PUBLIC CIBLE ===== -->
+    <section class="slide" id="slide-4" data-theme="target">
+        <div class="slide-inner">
+            <div class="slide-header">
+                <span class="slide-number">03</span>
+                <h2 class="slide-title">Public Cible & Proposition de Valeur</h2>
+            </div>
+            <div class="content-grid two-cols-uneven">
+                <div class="target-personas">
+                    <h3 class="section-label">🎯 Qui utilise CloudMate ?</h3>
+                    <div class="persona">
+                        <div class="persona-avatar">👩‍💻</div>
+                        <div>
+                            <strong>Développeurs Frontend / Backend</strong>
+                            <p>Qui veulent déployer sans dépendre d'un DevOps</p>
+                        </div>
+                    </div>
+                    <div class="persona">
+                        <div class="persona-avatar">🚀</div>
+                        <div>
+                            <strong>Startups & Side Projects</strong>
+                            <p>Budget limité, besoin de rapidité</p>
+                        </div>
+                    </div>
+                    <div class="persona">
+                        <div class="persona-avatar">👥</div>
+                        <div>
+                            <strong>Équipes Produit sans DevOps dédié</strong>
+                            <p>PME et scale-ups en croissance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-props">
+                    <h3 class="section-label">💎 La Valeur</h3>
+                    <div class="value-item">
+                        <span class="value-metric">⏱️ Temps</span>
+                        <p>Passez de <strong>jours</strong> à <strong>minutes</strong> pour déployer une stack complète.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-metric">🛡️ Fiabilité</span>
+                        <p><strong>Zéro erreur humaine</strong> grâce à la validation automatique.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-metric">🔓 Contrôle</span>
+                        <p><strong>Self-Hosted</strong>. Votre infra, vos règles. Pas de vendor lock-in.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-metric">💰 Coût</span>
+                        <p>Payez uniquement le prix AWS. <strong>Pas de surcoût PaaS.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 5: COMMENT ÇA MARCHE ===== -->
+    <section class="slide" id="slide-5" data-theme="demo">
+        <div class="slide-inner">
+            <div class="slide-header">
+                <span class="slide-number">04</span>
+                <h2 class="slide-title">Le Prototype : Comment ça marche ?</h2>
+            </div>
+            <p class="slide-subtitle">L'expérience utilisateur en 3 étapes</p>
+            <div class="workflow-steps">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Glisser & Déposer</h4>
+                        <p>L'utilisateur compose son architecture sur un <strong>canvas visuel</strong> interactif.</p>
+                        <div class="step-examples">
+                            <span class="example-tag">🖥️ Front Vite</span>
+                            <span class="example-tag">⚙️ Back Node.js</span>
+                            <span class="example-tag">🗄️ BDD Postgres</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-arrow">▼</div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Review & Validate</h4>
+                        <p>Un clic sur <strong>"Review Changes"</strong> pour voir le plan de déploiement, les changements et le coût estimé.</p>
+                    </div>
+                </div>
+                <div class="workflow-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-arrow">▼</div>
+                </div>
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Déployer & Monitorer</h4>
+                        <p>Un clic pour déployer. Suivi des <strong>logs en temps réel</strong> et feedback visuel immédiat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 6: LA MAGIE SOUS LE CAPOT ===== -->
+    <section class="slide" id="slide-6" data-theme="tech">
+        <div class="slide-inner">
+            <div class="slide-header">
+                <span class="slide-number">05</span>
+                <h2 class="slide-title">La « Magie » sous le Capot</h2>
+            </div>
+            <p class="slide-subtitle">Fonctionnalités Clés du Moteur CloudMate</p>
+            <div class="content-grid two-cols">
+                <div class="card card-tech">
+                    <div class="card-badge">🧠 Smart Context</div>
+                    <h3>Déduction Contextuelle</h3>
+                    <p>Quand vous reliez un <strong>serveur</strong> à une <strong>base de données</strong>, CloudMate déduit automatiquement :</p>
+                    <ul class="tech-list">
+                        <li><span class="tech-dot blue"></span>Les <strong>Security Groups</strong> (ports TCP)</li>
+                        <li><span class="tech-dot blue"></span>Les <strong>variables d'environnement</strong></li>
+                        <li><span class="tech-dot blue"></span>Les <strong>règles réseau</strong> nécessaires</li>
+                    </ul>
+                    <div class="tech-result">
+                        → Zéro configuration manuelle de la sécurité
+                    </div>
+                </div>
+                <div class="card card-tech">
+                    <div class="card-badge">✅ Topological Validation</div>
+                    <h3>Validation Topologique</h3>
+                    <p>Avant chaque déploiement, le système <strong>valide mathématiquement</strong> l'architecture :</p>
+                    <ul class="tech-list">
+                        <li><span class="tech-dot green"></span>Détection des <strong>cycles</strong> et dépendances</li>
+                        <li><span class="tech-dot green"></span>Vérification de la <strong>connectivité</strong></li>
+                        <li><span class="tech-dot green"></span>Validation des <strong>contraintes</strong> AWS</li>
+                    </ul>
+                    <div class="tech-result">
+                        → Pas de crash en production
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 7: FINOPS ===== -->
+    <section class="slide" id="slide-7" data-theme="finops">
+        <div class="slide-inner">
+            <div class="slide-header">
+                <span class="slide-number">06</span>
+                <h2 class="slide-title">FinOps : Maîtriser son Budget</h2>
+            </div>
+            <div class="finops-hero">
+                <div class="cost-display">
+                    <div class="cost-label">Estimation mensuelle</div>
+                    <div class="cost-value">
+                        <span class="cost-currency">$</span>
+                        <span class="cost-amount" id="costCounter">47</span>
+                        <span class="cost-period">/mois</span>
+                    </div>
+                    <div class="cost-breakdown">
+                        <div class="cost-item">
+                            <span class="cost-item-name">EC2 (t3.medium)</span>
+                            <span class="cost-item-value">$30.37</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-item-name">RDS PostgreSQL</span>
+                            <span class="cost-item-value">$12.41</span>
+                        </div>
+                        <div class="cost-item">
+                            <span class="cost-item-name">S3 + CloudFront</span>
+                            <span class="cost-item-value">$4.22</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="finops-features">
+                    <div class="finops-item">
+                        <span class="finops-icon">👁️</span>
+                        <div>
+                            <strong>Visibilité avant déploiement</strong>
+                            <p>Voyez le coût AWS exact <em>avant</em> de cliquer sur Deploy.</p>
+                        </div>
+                    </div>
+                    <div class="finops-item">
+                        <span class="finops-icon">📊</span>
+                        <div>
+                            <strong>Estimation prévisionnelle</strong>
+                            <p>Moteur de calcul basé sur les tarifs AWS en temps réel.</p>
+                        </div>
+                    </div>
+                    <div class="finops-item">
+                        <span class="finops-icon">🎯</span>
+                        <div>
+                            <strong>Pas de surprise</strong>
+                            <p>Fini les factures AWS inattendues à la fin du mois.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-callout callout-info">
+                <span class="callout-icon">💡</span>
+                <span>La transparence des coûts est un pilier central de l'expérience CloudMate — <strong>belek sur la facture</strong>.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 8: VISION ===== -->
+    <section class="slide" id="slide-8" data-theme="vision">
+        <div class="slide-inner">
+            <div class="slide-header">
+                <span class="slide-number">07</span>
+                <h2 class="slide-title">Vision & Perspectives d'Évolution</h2>
+            </div>
+            <div class="vision-content">
+                <div class="vision-statement">
+                    <p>Rivaliser avec les géants du PaaS en offrant une alternative</p>
+                    <div class="vision-tags">
+                        <span class="vision-tag">Open Source</span>
+                        <span class="vision-tag">Self-Hosted</span>
+                        <span class="vision-tag">Community-Driven</span>
+                    </div>
+                </div>
+                <div class="roadmap">
+                    <h3 class="section-label">🗺️ Roadmap</h3>
+                    <div class="roadmap-items">
+                        <div class="roadmap-item">
+                            <div class="roadmap-marker now"></div>
+                            <div class="roadmap-content">
+                                <span class="roadmap-phase">Maintenant</span>
+                                <p>Prototype fonctionnel — déploiement d'une stack complète (EC2, RDS, S3)</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-marker next"></div>
+                            <div class="roadmap-content">
+                                <span class="roadmap-phase">Court terme</span>
+                                <p>+ de ressources AWS (Lambda, ECS, SQS) · Alertes visuelles sur les ressources coûteuses</p>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-marker future"></div>
+                            <div class="roadmap-content">
+                                <span class="roadmap-phase">Long terme</span>
+                                <p>Import d'infra existantes · Multi-cloud (GCP, Azure) · Marketplace de templates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SLIDE 9: CONCLUSION ===== -->
+    <section class="slide" id="slide-9" data-theme="conclusion">
+        <div class="slide-inner title-slide">
+            <div class="floating-particles" id="particles-9"></div>
+            <div class="conclusion-content">
+                <h2 class="conclusion-title">CloudMate rend la puissance d'AWS<br>accessible à <span class="highlight-text">tous les développeurs</span>.</h2>
+                <p class="conclusion-sub">Un prototype déjà capable de déployer une stack complète.<br>Visuel. Intelligent. Transparent.</p>
+                <div class="conclusion-features">
+                    <span class="cf-item">🎨 Canvas Visuel</span>
+                    <span class="cf-item">🧠 Smart Context</span>
+                    <span class="cf-item">✅ Validation</span>
+                    <span class="cf-item">💰 FinOps</span>
+                    <span class="cf-item">🚀 One-Click Deploy</span>
+                </div>
+                <div class="conclusion-cta">
+                    <h3>Merci — Questions ?</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaker notes toggle -->
+
+    <script src="script.js"></script>
+</body>
+</html>
