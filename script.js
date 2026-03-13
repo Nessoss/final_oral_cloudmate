@@ -51,8 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
             nextSlide();
         } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
             prevSlide();
+        } else if (e.key === 'f' || e.key === 'F') {
+            toggleFullScreen();
         }
     });
+
+    function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(err => {
+                console.warn(`Error attempting to enable full-screen mode: ${err.message}`);
+            });
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    }
 
     // Click Navigation
     navNext.addEventListener('click', nextSlide);
